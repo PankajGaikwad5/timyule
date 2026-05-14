@@ -381,7 +381,7 @@ sunrise emanating warmth and providing life to the Earth.`,
   },
   {
     id: 30,
-    name: "The Hills are Bunning",
+    name: "The Hills are Burning",
     description: `Inspired by the bushfires that can engulf Australia - this painting
 depicts two sides of a river. One being destroyed by the fire and the
 other remains lush green. It highlights the indiscriminate nature of
