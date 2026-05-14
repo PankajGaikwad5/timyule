@@ -197,6 +197,15 @@ export default function InfiniteGrid() {
       </div>
         {items.map((_, i) => {
           const product = data[i % data.length];
+          let overlayText = "";
+          if (product.name === "MtSturgeon" || product.name === "Warrior Rise Up") {
+            overlayText = "Commision sold";
+          } else if (product.status === "instock") {
+            overlayText = "Available";
+          } else if (product.status === "commissioned" || product.status === "sold") {
+            overlayText = "Available for Commision";
+          }
+
           return (
           <div
             key={i}
@@ -217,7 +226,7 @@ export default function InfiniteGrid() {
                 while zooming and scrolling. Applying greyscale slightly first mimicking the premium moody aesthetic.
             */}
             <div 
-              className="w-full h-full cursor-pointer"
+              className="relative w-full h-full cursor-pointer"
               data-product-id={product.id}
             >
               <img
@@ -226,6 +235,11 @@ export default function InfiniteGrid() {
                 className="w-full h-full object-cover pointer-events-none select-none opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out grayscale-[20%] group-hover:grayscale-0"
                 draggable={false}
               />
+              <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out flex items-center justify-center pointer-events-none z-10">
+                <span className="font-[family-name:var(--font-display)] font-normal text-white text-3xl md:text-4xl leading-[1] tracking-[0.03em] text-center px-4">
+                  {overlayText}
+                </span>
+              </div>
             </div>
           </div>
         )})}
