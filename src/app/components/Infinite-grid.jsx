@@ -28,9 +28,27 @@ export default function InfiniteGrid() {
   const cols = 10;
   const rows = 8;
   const totalItems = cols * rows;
-  const itemWidth = 320;
-  const itemHeight = 520;
-  const gap = 150;
+  
+  const [dimensions, setDimensions] = React.useState({
+    itemWidth: 320,
+    itemHeight: 520,
+    gap: 150
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setDimensions({ itemWidth: 180, itemHeight: 290, gap: 80 });
+      } else {
+        setDimensions({ itemWidth: 320, itemHeight: 520, gap: 150 });
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const { itemWidth, itemHeight, gap } = dimensions;
   
   const tw = itemWidth + gap;
   const th = itemHeight + gap;
