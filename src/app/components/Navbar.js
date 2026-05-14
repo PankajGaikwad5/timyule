@@ -92,14 +92,14 @@ export default function Navbar({ shopUrl }) {
       >
         <a
           href="/collections"
-          onClick={scrollToAbout}
+          // onClick={scrollToAbout}
           className="font-[family-name:var(--font-display)] text-[clamp(40px,10vw,64px)] text-[var(--ink)] tracking-[-0.02em]"
         >
           Collections
         </a>
         <a
           href="/portfolio"
-          onClick={scrollToAbout}
+          // onClick={scrollToAbout}
           className="font-[family-name:var(--font-display)] text-[clamp(40px,10vw,64px)] text-[var(--ink)] tracking-[-0.02em]"
         >
           Portfolio
@@ -108,7 +108,7 @@ export default function Navbar({ shopUrl }) {
           href={'https://kdtygallery.com/collections/aboriginal-artist-tim-yule-wiradjuri'}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => setMenuOpen(false)}
+          // onClick={() => setMenuOpen(false)}
           className="inline-flex items-center gap-2 rounded-full font-medium text-[20px] px-8 py-3.5 bg-[var(--ink)] text-[var(--bg)]"
         >
           Visit the Shop ↗
