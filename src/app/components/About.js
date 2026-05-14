@@ -37,7 +37,7 @@ export default function About() {
         </p>
         <p>
           Every purchase supports organisations working with Indigenous Australian
-          communities. So your shelf gets cooler and the world gets slightly better.
+          communities. So your wall gets cooler and the world gets slightly better.
           Hard to argue with.
         </p>
       </div>
