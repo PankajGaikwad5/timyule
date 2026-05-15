@@ -38,7 +38,7 @@ export default function Footer({ shopUrl }) {
           <ul className="list-none p-0 m-0 flex flex-col gap-1.5">
             {[
               { label: 'Shopify store ↗', href: 'https://kdtygallery.com/collections/aboriginal-artist-tim-yule-wiradjuri', external: true },
-              { label: 'Instagram ↗', href: 'https://www.instagram.com/timothyyule/', external: true },
+              { label: 'Instagram ↗', href: 'https://www.instagram.com/timdyule/', external: true },
               // { label: 'TikTok ↗', href: '#', external: true },
             ].map(({ label, href, external }) => (
               <li key={label}>
