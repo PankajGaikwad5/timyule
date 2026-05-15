@@ -3,6 +3,7 @@
 /* ---- CSS Variables (Cream palette default) ---- */
 :root {
   --bg: #f5efe4;
+  /* --bg: #000; */
   --bg-2: #ebe2d2;
   --ink: #1d1a14;
   --ink-soft: #5a5141;
@@ -30,6 +31,52 @@ a {
   text-decoration: none;
 }
 
+/* ---- Loading animation ---- */
+@keyframes logoExplode {
+  0% {
+    transform: scale(0.04);
+    opacity: 0;
+  }
+
+  22% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+
+  /* hits full screen */
+  38% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+
+  /* hold at full screen */
+  58% {
+    transform: scale(0.52);
+  }
+
+  /* shoots past settled — overshoot */
+  72% {
+    transform: scale(0.80);
+  }
+
+  /* bounces back up */
+  83% {
+    transform: scale(0.60);
+  }
+
+  /* settles down */
+  91% {
+    transform: scale(0.70);
+  }
+
+  /* small bounce */
+  100% {
+    transform: scale(0.40);
+  }
+
+  /* final rest */
+}
+
 /* ---- Marquee ---- */
 @keyframes marquee {
   to {
@@ -40,7 +87,7 @@ a {
 .marquee-track {
   display: flex;
   white-space: nowrap;
-  animation: marquee 48s linear infinite;
+  /* animation: marquee 48s linear infinite; */
 }
 
 /* ---- Sticker wobble ---- */

@@ -3,10 +3,10 @@ import { Squiggle, SmallDot } from './ui'
 export default function Hero() {
   return (
     <header
-      className="relative z-10 pt-[2px] pb-0 px-[clamp(14px,4vw,48px)] md:px-[clamp(100px,4vw,48px)]"
+      className="relative z-10 pt-[24px] pb-0 px-[clamp(14px,4vw,48px)] md:px-[clamp(100px,4vw,48px)]"
       id="top"
     >
-      <div className="hero-grid">
+      <div className="hero-grid max-w-[1300px]">
         {/* ---- LEFT ---- */}
         <div>
           {/* Eyebrow */}
@@ -16,15 +16,15 @@ export default function Hero() {
           </div>
 
           {/* Display name */}
-          <h1 className="font-[family-name:var(--font-display)] font-normal text-[clamp(64px,11vw,168px)] leading-[0.9] tracking-[-0.03em] m-0 mb-7 text-[var(--ink)]">
+          {/* <h1 className="font-[family-name:var(--font-display)] font-normal text-[clamp(64px,11vw,168px)] leading-[0.9] tracking-[-0.03em] m-0 mb-7 text-[var(--ink)]">
             Tim
             Yule.
-          </h1>
+          </h1> */}
 
           {/* Quote */}
-          <p className="italic font-[family-name:var(--font-display)] text-[clamp(18px,1.8vw,24px)] leading-[1.4] max-w-[520px] text-[var(--ink)] m-0 mb-7">
-            &ldquo;Expressing my Indigenous heritage through art is a humbling and
-            gratifying experience. Every piece is unique  carrying its own story
+          <p className="italic font-[family-name:var(--font-display)] text-[clamp(18px,1.8vw,24px)] leading-[1.4] max-w-[560px] text-[var(--ink)] m-0 mb-7">
+            &ldquo;Expressing my Indigenous heritage through art is a humbling < br />
+            and gratifying experience. Every piece is unique  carrying <br/> its own story
             through colour, rhythm and design.&rdquo;
           </p>
 
@@ -56,37 +56,48 @@ export default function Hero() {
         </div>
 
         {/* ---- RIGHT: Portrait ---- */}
-        <div className="relative">
-          <div className="max-w-[400px] ml-auto">
+        <div>
+          <div className="relative max-w-[400px] ml-auto">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="./potrait2.png"
               alt="Timothy Yule — artist portrait"
               className="w-full rounded-sm object-cover object-top aspect-[3/4] block"
             />
-          </div>
 
-          {/* Heritage badge */}
-          <div className="flex flex-col gap-1.5 mt-4 text-[var(--ink-soft)]">
-            <Squiggle width={50} opacity={0.7} />
-            <small className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.2em] max-w-[200px] leading-[1.6]">
-              indigenous australian 
-            </small>
+            {/* Heritage badge — anchored to portrait */}
+            <div className="absolute bottom-4 left-4 flex flex-col gap-1.5 bg-(--bg)/85 backdrop-blur-[2px] px-3 py-2.5 rounded-sm border border-(--line)">
+              <Squiggle width={36} opacity={0.6} />
+              <small className="font-mono text-[9px] uppercase tracking-[0.22em] text-(--ink-soft) leading-[1.6]">
+                indigenous australian
+              </small>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* ---- Marquee Strip ---- */}
+      {/* ---- Category Strip ---- */}
       <div
-        className="relative z-10 overflow-hidden italic mt-7 border-y border-[var(--line)] font-[family-name:var(--font-display)] text-[clamp(22px,4vw,36px)] py-3.5 text-[var(--ink)]"
+        className="relative z-10 mt-7 border-y border-(--line) font-(family-name:--font-display) text-[clamp(16px,2.4vw,30px)] py-3.5 text-(--ink) italic"
         aria-hidden="true"
       >
-        <div className="marquee-track">
-          {[0, 1].map((i) => (
-            <span key={i} className="pr-6">
-              handmade artefacts &nbsp;✺&nbsp; home decor &nbsp;✺&nbsp; original art &nbsp;✺&nbsp;
-              wearables &nbsp;✺&nbsp; commissions &nbsp;✺&nbsp; handmade artefacts &nbsp;✺&nbsp;
-              home decor &nbsp;✺&nbsp; original art &nbsp;✺&nbsp;
+        <div className="flex items-center justify-center flex-wrap gap-y-1">
+          {['handmade artefacts', 'home decor', 'original art', 'wearables', 'commissions'].map((item, i, arr) => (
+            <span key={item} className="flex items-center">
+              {item}
+              {i < arr.length - 1 && (
+                <span
+                  style={{
+                    display: 'inline-block',
+                    width: '1px',
+                    height: '1.1em',
+                    margin: '0 clamp(12px, 2vw, 28px)',
+                    background: 'linear-gradient(to bottom, transparent, var(--ink-soft) 25%, var(--ink-soft) 75%, transparent)',
+                    opacity: 0.35,
+                    verticalAlign: 'middle',
+                  }}
+                />
+              )}
             </span>
           ))}
         </div>

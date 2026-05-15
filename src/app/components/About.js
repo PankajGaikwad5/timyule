@@ -2,8 +2,8 @@ import { Squiggle, Kicker, SectionTitle } from './ui'
 
 const stats = [
   { value: '120+', label: 'original pieces' },
-  { value: '4', label: 'collections a year' },
-  { value: '11', label: 'community partners' },
+  { value: '3', label: 'Categories' },
+  { value: '11', label: 'community collaborations' },
   { value: '1', label: 'very full studio' },
 ]
 

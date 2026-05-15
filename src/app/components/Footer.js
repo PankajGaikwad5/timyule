@@ -21,12 +21,12 @@ export default function Footer({ shopUrl }) {
               ty
             </span>
             <span className="font-[family-name:var(--font-display)] text-[44px] tracking-[-0.02em] text-[var(--ink)] leading-none">
-              timothy&nbsp;yule
+              tim&nbsp;yule
             </span>
           </div>
           <p className="text-sm text-[var(--ink-soft)] max-w-[320px] leading-[1.6] m-0">
             Indigenous Australian &amp; Home decor, originals, and the occasional
-            experiment. Made on Gadigal &amp; Wurundjeri Country.
+            experiment. Made in Dharug Country.
           </p>
         </div>
 

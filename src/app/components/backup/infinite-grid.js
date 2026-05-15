@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { data } from "../data";
+import { data } from "../../data";
 
 export default function InfiniteGrid() {
   const containerRef = useRef(null);

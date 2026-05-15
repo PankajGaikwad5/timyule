@@ -35,9 +35,13 @@ export default function Navbar({ shopUrl }) {
           <span className="inline-grid place-items-center rounded-full shrink-0 italic select-none w-[38px] h-[38px] bg-[var(--ink)] text-[var(--bg)] font-[family-name:var(--font-display)] text-[18px] tracking-[-0.02em] -rotate-6">
             ty
           </span>
-          <span className="font-[family-name:var(--font-display)] text-[clamp(20px,3vw,28px)] tracking-[-0.02em] text-[var(--ink)] leading-none">
+          {/* <span className="font-[family-name:var(--font-display)] text-[clamp(20px,3vw,28px)] tracking-[-0.02em] text-[var(--ink)] leading-none">
             tim&nbsp;yule
-          </span>
+          </span> */}
+          <h1 className="font-[family-name:var(--font-display)] font-normal text-[clamp(20px,3vw,28px)] leading-[0.9] tracking-[0.03em] text-[var(--ink)]">
+            Tim
+            Yule.
+          </h1>
         </a>
 
         {/* Desktop links */}

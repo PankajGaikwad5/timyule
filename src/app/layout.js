@@ -1,5 +1,6 @@
 import { Instrument_Serif, Instrument_Sans } from 'next/font/google'
 import './globals.css'
+import WhatsAppButton from './components/WhatsAppButton'
 
 const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
     >
       <body style={{ fontFamily: 'var(--font-body), system-ui, sans-serif' }}>
         {children}
+        <WhatsAppButton/>
       </body>
     </html>
   )
