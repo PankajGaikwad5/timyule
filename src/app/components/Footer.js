@@ -124,7 +124,7 @@ export default function Footer({ shopUrl }) {
         {/* Newsletter */}
         <div>
           <h4 className="font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-[0.2em] text-[var(--ink-soft)] font-medium m-0 mb-3.5">
-            newsletter
+            stay connected
           </h4>
           <p className="text-sm text-[var(--ink-soft)] leading-[1.6] m-0 mb-[10px]">
             Drop your email and we&rsquo;ll get back to you.
