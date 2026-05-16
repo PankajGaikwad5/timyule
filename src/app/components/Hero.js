@@ -78,7 +78,7 @@ export default function Hero() {
 
       {/* ---- Category Strip ---- */}
       <div
-        className="relative z-10 mt-7 border-y border-(--line) font-(family-name:--font-display) text-[clamp(16px,2.4vw,30px)] py-3.5 text-(--ink) italic"
+        className="relative z-10 mt-7 border-y border-(--line) font-[family-name:var(--font-mono)] text-[clamp(13px,1.5vw,16px)] py-4 text-(--ink) uppercase tracking-[0.16em] italic"
         aria-hidden="true"
       >
         <div className="flex items-center justify-center flex-wrap gap-y-1">
