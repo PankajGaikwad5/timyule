@@ -1,3 +1,19 @@
+export const metadata = {
+  title: 'Portfolio',
+  description:
+    'Explore the portfolio of Timothy Yule — Wiradjuri man and Indigenous Australian artist. Original landscape paintings, cultural works, and stories of Country, ancestors, and connection.',
+  alternates: {
+    canonical: 'https://timyule.au/portfolio',
+  },
+  openGraph: {
+    title: 'Portfolio — Timothy Yule',
+    description:
+      'Original paintings and cultural artworks by Wiradjuri artist Timothy Yule. Stories of Country, ancestors, and Indigenous Australian identity.',
+    url: 'https://timyule.au/portfolio',
+    type: 'website',
+  },
+}
+
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import About from '../components/About'

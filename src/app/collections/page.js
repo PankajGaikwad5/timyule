@@ -1,3 +1,19 @@
+export const metadata = {
+  title: 'Collections',
+  description:
+    'Browse original Aboriginal artworks by Timothy Yule — paintings available to purchase, commissioned works, and the archive of sold pieces. Each painting tells a story of Country and culture.',
+  alternates: {
+    canonical: 'https://timyule.au/collections',
+  },
+  openGraph: {
+    title: 'Collections — Timothy Yule',
+    description:
+      'Browse original Aboriginal artworks by Timothy Yule — in-stock paintings, commissioned pieces, and the sold archive.',
+    url: 'https://timyule.au/collections',
+    type: 'website',
+  },
+}
+
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Link from 'next/link';
