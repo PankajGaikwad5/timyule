@@ -2,13 +2,18 @@ import { data } from './data'
 
 const BASE = 'https://timyule.au'
 
+// URL-encode each path segment so special chars like & and spaces are valid XML
+function encodeImagePath(path) {
+  return path.split('/').map((seg) => (seg ? encodeURIComponent(seg) : seg)).join('/')
+}
+
 export default function sitemap() {
   const productEntries = data.map((product) => ({
     url: `${BASE}/product/${product.id}`,
     lastModified: new Date(),
     changeFrequency: product.status === 'instock' ? 'weekly' : 'monthly',
     priority: product.status === 'instock' ? 0.8 : 0.6,
-    images: product.images.map((img) => `${BASE}${img}`),
+    images: product.images.map((img) => `${BASE}${encodeImagePath(img)}`),
   }))
 
   return [
