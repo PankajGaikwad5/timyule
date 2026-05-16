@@ -4,6 +4,7 @@ import About from '../components/About'
 import Work from '../components/Work'
 import Collections from '../components/Collections'
 import StudioSection from '../components/StudioSection'
+import AcknowledgementOfCountry from '../components/AcknowledgementOfCountry'
 import CTASection from '../components/CTASection'
 import Footer from '../components/Footer'
 
@@ -27,6 +28,7 @@ export default function HomePage() {
       <Work shopUrl={SHOP_URL} />
       {/* <Collections shopUrl={SHOP_URL} /> */}
       {/* <StudioSection /> */}
+      <AcknowledgementOfCountry />
       <CTASection shopUrl={SHOP_URL} />
       <Footer shopUrl={SHOP_URL} />
     </div>
