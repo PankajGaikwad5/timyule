@@ -206,6 +206,9 @@ function MarqueeRow({ products, direction = 1, itemWidth, itemHeight, gap, onCom
                 <img
                   src={product.images[0]}
                   alt={product.name}
+                  width={600}
+                  height={600}
+                  loading="lazy"
                   className="w-full h-full object-cover pointer-events-none select-none opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out grayscale-15 group-hover:grayscale-0"
                   draggable={false}
                 />

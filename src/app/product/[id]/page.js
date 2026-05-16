@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import ProductActions from '../../components/ProductActions';
@@ -119,10 +120,16 @@ export default async function ProductPage({ params }) {
         <div className="flex-1 flex flex-col gap-8 w-full">
           {product.images.map((img, idx) => (
             <div key={idx} className="w-full rounded-[24px] overflow-hidden shadow-2xl bg-[var(--line)]">
-              <img
+              <Image
                 src={img}
                 alt={idx === 0 ? `${product.name} by Timothy Yule — original Aboriginal painting` : `${product.name} — view ${idx + 1}`}
-                className="w-full h-auto object-cover"
+                width={1200}
+                height={900}
+                className="w-full object-cover"
+                style={{ height: 'auto' }}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority={idx === 0}
+                loading={idx === 0 ? 'eager' : 'lazy'}
               />
             </div>
           ))}

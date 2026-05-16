@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Squiggle, SmallDot } from './ui'
 
 export default function Hero() {
@@ -57,12 +58,14 @@ export default function Hero() {
 
         {/* ---- RIGHT: Portrait ---- */}
         <div>
-          <div className="relative max-w-[400px] ml-auto">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="./potrait2.png"
+          <div className="relative max-w-[400px] ml-auto aspect-[3/4]">
+            <Image
+              src="/potrait2.png"
               alt="Timothy Yule — artist portrait"
-              className="w-full rounded-sm object-cover object-top aspect-[3/4] block"
+              fill
+              priority
+              className="rounded-sm object-cover object-top"
+              sizes="(max-width: 980px) 100vw, 400px"
             />
 
             {/* Heritage badge — anchored to portrait */}

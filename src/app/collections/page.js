@@ -14,6 +14,7 @@ export const metadata = {
   },
 }
 
+import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Link from 'next/link';
@@ -36,10 +37,15 @@ export default function CollectionsPage() {
           className="work-tile block relative"
           style={{ gridColumn: 'span 4' }}
         >
-          <img
+          <Image
             src={item.images[0]}
             alt={item.name}
-            className="w-full h-full object-cover rounded-sm block min-h-[180px] aspect-square"
+            width={400}
+            height={400}
+            className="w-full object-cover rounded-sm block aspect-square"
+            style={{ height: 'auto' }}
+            sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 25vw"
+            loading="lazy"
           />
           <div className="flex justify-between items-center mt-2.5 font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-[0.16em] text-[var(--ink-soft)]">
             <span>{item.name}</span>
