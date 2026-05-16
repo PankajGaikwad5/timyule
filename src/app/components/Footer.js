@@ -62,14 +62,18 @@ export default function Footer({ shopUrl }) {
           </h4>
           <ul className="list-none p-0 m-0 flex flex-col gap-1.5">
             {[
-              { label: 'hello@timyule.example', href: 'mailto:hello@timyule.example' },
-              { label: 'commissions', href: 'mailto:press@timyule.example' },
+              { label: 'Get in touch', href: 'mailto:timdyule@gmail.com' },
+              { label: 'Commissions', href: 'mailto:timdyule@gmail.com' },
             ].map(({ label, href }) => (
               <li key={label}>
                 <a
                   href={href}
-                  className="text-sm text-[var(--ink)] border-b border-transparent pb-0.5 transition-colors duration-200 ease-in hover:border-[var(--ink)]"
+                  className="inline-flex items-center gap-1.5 text-sm text-(--ink) border-b border-transparent pb-0.5 transition-colors duration-200 ease-in hover:border-(--ink)"
                 >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  </svg>
                   {label}
                 </a>
               </li>
@@ -83,7 +87,7 @@ export default function Footer({ shopUrl }) {
             newsletter
           </h4>
           <p className="text-sm text-[var(--ink-soft)] leading-[1.6] m-0 mb-[10px]">
-            A short note every few months when a new collection drops. No spam, no nagging.
+            Drop your email and we&rsquo;ll get back to you.
           </p>
 
           {joined ? (
