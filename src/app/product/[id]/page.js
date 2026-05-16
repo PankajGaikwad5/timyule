@@ -1,5 +1,6 @@
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import ProductActions from '../../components/ProductActions';
 import { data } from '../../data';
 
 const SHOP_URL = 'https://kdtygallery.com/collections/aboriginal-artist-tim-yule-wiradjuri';
@@ -64,24 +65,7 @@ export default async function ProductPage({ params }) {
             {product.description}
           </p>
           
-          {product.link ? (
-            <div className="mt-4">
-              <a 
-                href={product.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-[var(--ink)] text-[var(--bg)] px-8 py-4 rounded-full font-medium tracking-wide hover:scale-[1.02] active:scale-[0.98] transition-transform duration-200"
-              >
-                Shop on Shopify
-              </a>
-            </div>
-          ) : (
-            <div className="mt-4">
-              <span className="inline-flex items-center justify-center bg-transparent border border-[var(--line)] text-[var(--ink-soft)] px-8 py-4 rounded-full font-medium tracking-wide">
-                Currently Unavailable
-              </span>
-            </div>
-          )}
+          <ProductActions product={product} />
         </div>
       </main>
 

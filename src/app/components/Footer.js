@@ -1,14 +1,48 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import CommissionModal from './CommissionModal'
 
 export default function Footer({ shopUrl }) {
+  const [commissionOpen, setCommissionOpen] = useState(false)
   const [email, setEmail] = useState('')
+  const [honeypot, setHoneypot] = useState('')
+  const [formLoadTime, setFormLoadTime] = useState(null)
   const [joined, setJoined] = useState(false)
+  const [error, setError] = useState('')
+  const [submitting, setSubmitting] = useState(false)
 
-  const handleSubmit = (e) => {
+  useEffect(() => {
+    setFormLoadTime(Date.now())
+  }, [])
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setEmail('')
-    setJoined(true)
+    setError('')
+    setSubmitting(true)
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          honeypot,
+          timestamp: formLoadTime,
+        }),
+      })
+
+      if (response.ok) {
+        setEmail('')
+        setJoined(true)
+      } else {
+        const data = await response.json()
+        setError(data.error || 'Something went wrong. Please try again.')
+      }
+    } catch {
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -61,23 +95,29 @@ export default function Footer({ shopUrl }) {
             say hi
           </h4>
           <ul className="list-none p-0 m-0 flex flex-col gap-1.5">
-            {[
-              { label: 'Get in touch', href: 'mailto:timdyule@gmail.com' },
-              { label: 'Commissions', href: 'mailto:timdyule@gmail.com' },
-            ].map(({ label, href }) => (
-              <li key={label}>
-                <a
-                  href={href}
-                  className="inline-flex items-center gap-1.5 text-sm text-(--ink) border-b border-transparent pb-0.5 transition-colors duration-200 ease-in hover:border-(--ink)"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <rect x="2" y="4" width="20" height="16" rx="2"/>
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                  </svg>
-                  {label}
-                </a>
-              </li>
-            ))}
+            <li>
+              <a
+                href="mailto:timdyule@gmail.com"
+                className="inline-flex items-center gap-1.5 text-sm text-(--ink) border-b border-transparent pb-0.5 transition-colors duration-200 ease-in hover:border-(--ink)"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+                Get in touch
+              </a>
+            </li>
+            <li>
+              <button
+                onClick={() => setCommissionOpen(true)}
+                className="inline-flex items-center gap-1.5 text-sm text-(--ink) border-b border-transparent pb-0.5 transition-colors duration-200 ease-in hover:border-(--ink) bg-transparent border-0 p-0 cursor-pointer font-[inherit]"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                </svg>
+                Commissions
+              </button>
+            </li>
           </ul>
         </div>
 
@@ -95,21 +135,38 @@ export default function Footer({ shopUrl }) {
               thanks! see you soon ✿
             </p>
           ) : (
-            <form onSubmit={handleSubmit} className="flex gap-2 mt-2">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-2 mt-2">
+              {/* Honeypot — hidden from users, bots will fill it */}
               <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email"
-                required
-                className="flex-1 outline-none px-3.5 py-2.5 rounded-full bg-transparent text-[var(--ink)] border border-[var(--line)] text-sm"
+                type="text"
+                name="website"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0, pointerEvents: 'none' }}
+                tabIndex="-1"
+                autoComplete="off"
+                aria-hidden="true"
               />
-              <button
-                type="submit"
-                className="px-4 py-2.5 rounded-full bg-[var(--ink)] text-[var(--bg)] border-0 text-sm cursor-pointer whitespace-nowrap"
-              >
-                Join →
-              </button>
+              <div className="flex gap-2">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email"
+                  required
+                  className="flex-1 outline-none px-3.5 py-2.5 rounded-full bg-transparent text-(--ink) border border-(--line) text-sm"
+                />
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="px-4 py-2.5 rounded-full bg-(--ink) text-(--bg) border-0 text-sm cursor-pointer whitespace-nowrap disabled:opacity-60"
+                >
+                  {submitting ? '...' : 'Join →'}
+                </button>
+              </div>
+              {error && (
+                <p className="text-xs text-red-500 pl-1">{error}</p>
+              )}
             </form>
           )}
         </div>
@@ -120,6 +177,8 @@ export default function Footer({ shopUrl }) {
         <span>© {new Date().getFullYear()} Timothy Yule. All works copyright their artists.</span>
         <span>Site is a portfolio piece — not affiliated with anyone but the studio.</span>
       </div>
+
+      <CommissionModal isOpen={commissionOpen} onClose={() => setCommissionOpen(false)} />
     </footer>
   )
 }
