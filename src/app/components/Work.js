@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { Squiggle, Kicker, SectionTitle } from './ui'
 import Link from 'next/link'
 import { data } from '../data'
@@ -41,14 +40,13 @@ export default function Work() {
               className="work-tile block relative"
               style={{ gridColumn: colSpan, gridRow: rowSpan }}
             >
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={item.images[0]}
                 alt={item.name}
-                width={600}
-                height={600}
-                className="w-full object-cover rounded-sm block"
-                style={{ height: 'auto' }}
-                sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 25vw"
+                width={800}
+                height={800}
+                className="w-full h-full object-cover rounded-sm block min-h-[180px]"
                 loading={i === 0 ? 'eager' : 'lazy'}
               />
               <div className="flex justify-between items-center mt-2.5 font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-[0.16em] text-[var(--ink-soft)]">
