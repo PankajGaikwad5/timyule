@@ -59,8 +59,7 @@ export default function Footer({ shopUrl }) {
             </span>
           </div>
           <p className="text-sm text-[var(--ink-soft)] max-w-[320px] leading-[1.6] m-0">
-            Indigenous Australian &amp; Home decor, originals, and the occasional
-            experiment. Made in Dharug Country.
+           Indigenous Australian original art, decor, wearables and the occasional experiment. Made on Dharug Country.
           </p>
         </div>
 

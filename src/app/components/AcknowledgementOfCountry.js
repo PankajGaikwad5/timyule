@@ -6,7 +6,7 @@ export default function AcknowledgementOfCountry() {
       </h2>
       <p className="font-[family-name:var(--font-display)] text-[clamp(14px,1.5vw,18px)] leading-relaxed text-[var(--ink-soft)] m-0 max-w-[620px] mx-auto">
         Tim Yule respectfully acknowledges the Traditional Custodians of{' '}
-        Wangal Country, on which we operate, live and gather. We pay our respect to Elders past,
+        Dharug Country, on which we operate, live and gather. We pay our respect to Elders past,
         present and emerging and to all Aboriginal and Torres Strait Islander Peoples here today.
       </p>
     </section>

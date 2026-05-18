@@ -26,19 +26,19 @@ export default function About() {
       {/* Two-column body */}
       <div className="about-body">
         <p>
-          Tim&rsquo;s work is shaped by a rich tapestry of Indigenous Australian  driven by a deep reverence for tradition and craftsmanship, with a
-          soft spot for the kind of objects that make a room feel{' '}
-          <em>actually</em> lived in.
+          Tim&rsquo;s work is deeply inspired by his Indigenous Australian heritage, it&rsquo;s
+          shaped by a strong connection to Country, reflection and storytelling. Guided by a
+          respect for <em>authenticity &nbsp;</em> each artwork is created to bring meaning, warmth and a sense
+          of connection into contemporary spaces.
         </p>
         <p>
-          Each piece is a curated blend of handmade artefacts — selected to tell a story,
-          evoke emotion, and bring a sense of history and warmth to your space. Bit of colour.
-          Bit of rhythm. A whole lot of intent.
+          Through layered landscapes, flowing waterways and symbolic detail, Tim&rsquo;s pieces
+          evoke emotion, memories and showcase the relationship between people and land.
         </p>
         <p>
-          Every purchase supports organisations working with Indigenous Australian
-          communities. So your wall gets cooler and the world gets slightly better.
-          Hard to argue with.
+          Each artwork reflects a thoughtful and <em>intentional &nbsp;</em> process &mdash; celebrating
+          heritage, nature and spirit while offering collectors a meaningful connection to
+          contemporary Indigenous art.
         </p>
       </div>
 

@@ -21,11 +21,11 @@ export default function AnimatedSignature() {
 
   return (
     <img
-      src="/timbg.png"
+      src="/timbg2.png"
       alt=""
       draggable={false}
       aria-hidden="true"
-      className="mt-10"
+      className="mt-3 "
       style={{
         position: "absolute",
         inset: 0,
