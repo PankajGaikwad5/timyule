@@ -24,8 +24,8 @@ export default function Hero() {
 
           {/* Quote */}
           <p className="italic font-[family-name:var(--font-display)] text-[clamp(18px,1.8vw,24px)] leading-[1.4] max-w-[560px] text-[var(--ink)] m-0 mb-7">
-            &ldquo;Expressing my Indigenous heritage through art is a humbling < br />
-            and gratifying experience. Every piece is unique  carrying <br/> its own story
+            &ldquo;Expressing my Indigenous heritage through art is a humbling<br className="hidden md:block" />
+            {' '}and gratifying experience. Every piece is unique  carrying <br/> its own story
             through colour, rhythm and design.&rdquo;
           </p>
 
