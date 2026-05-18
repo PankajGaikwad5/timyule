@@ -46,7 +46,7 @@ export default function Hero() {
                 strokeLinejoin="round"
               />
             </svg> */}
-            <img src="/timsign.png" alt="" />
+            <img src="/sign.png" alt="" className='max-w-[150px] md:max-w-[350px] w-full'/>
           </div>
 
           {/* Location meta */}
