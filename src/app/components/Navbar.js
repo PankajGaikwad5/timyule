@@ -39,8 +39,8 @@ export default function Navbar({ shopUrl }) {
             tim&nbsp;yule
           </span> */}
           <h1 className="font-[family-name:var(--font-display)] font-normal text-[clamp(20px,3vw,28px)] leading-[0.9] tracking-[0.03em] text-[var(--ink)]">
-            Tim
-            Yule.
+            tim
+            yule.
           </h1>
         </a>
 
