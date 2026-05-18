@@ -2,12 +2,12 @@ import { Squiggle } from './ui'
 
 export default function CTASection({ shopUrl }) {
   return (
-    <div className="bg-[var(--ink)] text-[var(--bg)] rounded-2xl md:rounded-3xl py-12 md:py-[80px] px-[clamp(16px,4vw,48px)] max-w-[1272px] mx-4 md:mx-auto my-4 md:my-10 text-center relative z-10 overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(600px_300px_at_50%_0%,color-mix(in_oklch,var(--accent)_25%,transparent),transparent_70%)] before:pointer-events-none">
+    <div data-animate-section className="bg-[var(--ink)] text-[var(--bg)] rounded-2xl md:rounded-3xl py-12 md:py-[80px] px-[clamp(16px,4vw,48px)] max-w-[1272px] mx-4 md:mx-auto my-4 md:my-10 text-center relative z-10 overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(600px_300px_at_50%_0%,color-mix(in_oklch,var(--accent)_25%,transparent),transparent_70%)] before:pointer-events-none">
       <div className="relative max-w-[480px] md:max-w-[740px] mx-auto flex flex-col items-center gap-4 md:gap-[22px]">
-        <Squiggle width={100} opacity={0.8} className="md:hidden" />
-        <Squiggle width={140} opacity={0.8} className="hidden md:block" />
+        <Squiggle data-animate-reveal width={100} opacity={0.8} className="md:hidden" />
+        <Squiggle data-animate-reveal width={140} opacity={0.8} className="hidden md:block" />
 
-        <h2 className="font-[family-name:var(--font-display)] font-normal text-[clamp(38px,9vw,120px)] leading-none tracking-[-0.03em] m-0 text-[var(--bg)]">
+        <h2 data-animate-reveal className="font-[family-name:var(--font-display)] font-normal text-[clamp(38px,9vw,120px)] leading-none tracking-[-0.03em] m-0 text-[var(--bg)]">
           Take a piece{' '}
           <em className="italic text-[color-mix(in_oklch,var(--accent)_90%,var(--bg))]">
             home
@@ -15,12 +15,13 @@ export default function CTASection({ shopUrl }) {
           .
         </h2>
 
-        <p className="italic font-[family-name:var(--font-display)] text-[15px] md:text-[22px] text-[color-mix(in_oklch,var(--bg)_80%,var(--ink))] m-0 max-w-[520px]">
+        <p data-animate-reveal className="italic font-[family-name:var(--font-display)] text-[15px] md:text-[22px] text-[color-mix(in_oklch,var(--bg)_80%,var(--ink))] m-0 max-w-[520px]">
           The full catalogue, current drops, and the occasional one-off live over on
           the Shopify store.
         </p>
 
         <a
+          data-animate-reveal
           href={shopUrl}
           target="_blank"
           rel="noopener noreferrer"

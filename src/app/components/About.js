@@ -10,21 +10,22 @@ const stats = [
 export default function About() {
   return (
     <section
+      data-animate-section
       id="about"
       className="relative z-10 py-[110px] px-[clamp(16px,4vw,48px)] max-w-[1200px] mx-auto"
     >
       {/* Kicker row */}
-      <div className="flex items-center gap-3 mb-4 text-[var(--ink-soft)]">
+      <div data-animate-reveal className="flex items-center gap-3 mb-4 text-[var(--ink-soft)]">
         <Squiggle width={80} />
         <Kicker>a little story</Kicker>
       </div>
 
-      <SectionTitle>
+      <SectionTitle data-animate-reveal>
         where heritage <em className="italic text-[var(--accent)]">meets</em> home.
       </SectionTitle>
 
       {/* Two-column body */}
-      <div className="about-body">
+      <div data-animate-reveal className="about-body">
         <p>
           Tim&rsquo;s work is deeply inspired by his Indigenous Australian heritage, it&rsquo;s
           shaped by a strong connection to Country, reflection and storytelling. Guided by a
@@ -45,7 +46,7 @@ export default function About() {
       {/* Stats row */}
       <div className="grid gap-6 mt-16 pt-16 border-t border-[var(--line)] grid-cols-[repeat(auto-fit,minmax(140px,1fr))]">
         {stats.map(({ value, label }) => (
-          <div key={label} className="flex flex-col gap-1">
+          <div key={label} data-animate-stat className="flex flex-col gap-1">
             <strong className="font-[family-name:var(--font-display)] font-normal text-[clamp(40px,5vw,56px)] leading-none tracking-[-0.02em] text-[var(--ink)]">
               {value}
             </strong>

@@ -46,8 +46,8 @@ export default function Footer({ shopUrl }) {
   }
 
   return (
-    <footer className="relative z-10 px-[clamp(16px,4vw,48px)] pt-[100px] pb-10 max-w-[1320px] mx-auto">
-      <div className="footer-grid">
+    <footer data-animate-section className="relative z-10 px-[clamp(16px,4vw,48px)] pt-[100px] pb-10 max-w-[1320px] mx-auto">
+      <div data-animate-reveal className="footer-grid">
         {/* Wordmark + blurb */}
         <div>
           <div className="inline-flex items-center gap-3 mb-4">
@@ -172,7 +172,7 @@ export default function Footer({ shopUrl }) {
       </div>
 
       {/* Bottom bar */}
-      <div className="flex justify-between flex-wrap gap-4 pt-6 font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.16em] text-[var(--ink-soft)]">
+      <div data-animate-reveal className="flex justify-between flex-wrap gap-4 pt-6 font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.16em] text-[var(--ink-soft)]">
         <span>© {new Date().getFullYear()} Timothy Yule. All works copyright their artists.</span>
         <span>Site is a portfolio piece — not affiliated with anyone but the studio.</span>
       </div>

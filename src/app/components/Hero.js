@@ -4,6 +4,7 @@ import { Squiggle, SmallDot } from './ui'
 export default function Hero() {
   return (
     <header
+      data-animate-section
       className="relative z-10 pt-[24px] pb-0 px-[clamp(14px,4vw,48px)] md:px-[clamp(100px,4vw,48px)]"
       id="top"
     >
@@ -11,7 +12,7 @@ export default function Hero() {
         {/* ---- LEFT ---- */}
         <div>
           {/* Eyebrow */}
-          <div className="inline-flex items-center gap-3 mb-6 font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">
+          <div data-hero-reveal className="inline-flex items-center gap-3 mb-6 font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">
             <Squiggle width={36} />
             <span>The Artist</span>
           </div>
@@ -23,14 +24,14 @@ export default function Hero() {
           </h1> */}
 
           {/* Quote */}
-          <p className="italic font-[family-name:var(--font-display)] text-[clamp(18px,1.8vw,24px)] leading-[1.4] max-w-[560px] text-[var(--ink)] m-0 mb-7">
+          <p data-hero-reveal className="italic font-[family-name:var(--font-display)] text-[clamp(18px,1.8vw,24px)] leading-[1.4] max-w-[560px] text-[var(--ink)] m-0 mb-7">
             &ldquo;Expressing my Indigenous heritage through art is a humbling<br className="hidden md:block" />
             {' '}and gratifying experience. Every piece is unique  carrying <br/> its own story
             through colour, rhythm and design.&rdquo;
           </p>
 
           {/* Signature */}
-          <div className="mb-8 text-[var(--ink)]" aria-label="Timothy Yule signature">
+          <div data-hero-reveal className="mb-8 text-[var(--ink)]" aria-label="Timothy Yule signature">
             {/* <svg viewBox="0 0 220 60" width="180" height="50">
               <path
                 d="M10 40 C 20 20, 30 18, 36 38 C 40 50, 50 50, 55 30 C 60 18, 75 18, 78 36
@@ -49,7 +50,7 @@ export default function Hero() {
           </div>
 
           {/* Location meta */}
-          <div className="flex items-center flex-wrap font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-[0.16em] text-[var(--ink-soft)]">
+          <div data-hero-reveal className="flex items-center flex-wrap font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-[0.16em] text-[var(--ink-soft)]">
             <span>Sydney</span>
             <SmallDot />
             <span>Est. since forever-ish</span>
@@ -58,7 +59,7 @@ export default function Hero() {
 
         {/* ---- RIGHT: Portrait ---- */}
         <div>
-          <div className="relative max-w-[400px] ml-auto aspect-[3/4]">
+          <div data-hero-image className="relative max-w-[400px] ml-auto aspect-[3/4]">
             <Image
               src="/potrait2.png"
               alt="Timothy Yule — artist portrait"
@@ -81,6 +82,7 @@ export default function Hero() {
 
       {/* ---- Category Strip ---- */}
       <div
+        data-hero-reveal
         className="relative z-10 mt-7 border-y border-(--line) font-[family-name:var(--font-mono)] text-[clamp(13px,1.5vw,16px)] py-4 text-(--ink) uppercase tracking-[0.16em] italic"
         aria-hidden="true"
       >

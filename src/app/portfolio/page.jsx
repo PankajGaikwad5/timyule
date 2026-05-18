@@ -23,12 +23,14 @@ import StudioSection from '../components/StudioSection'
 import AcknowledgementOfCountry from '../components/AcknowledgementOfCountry'
 import CTASection from '../components/CTASection'
 import Footer from '../components/Footer'
+import PortfolioAnimations from '../components/PortfolioAnimations'
 
 const SHOP_URL = 'https://kdtygallery.com/collections/aboriginal-artist-tim-yule-wiradjuri' // ← swap this for the real URL
 
 export default function HomePage() {
   return (
     <div
+      data-portfolio-page
       className="relative overflow-hidden page-texture"
       style={{
         background: `
@@ -38,6 +40,7 @@ export default function HomePage() {
         `,
       }}
     >
+      <PortfolioAnimations />
       <Navbar shopUrl={SHOP_URL} />
       <Hero />
       <About />

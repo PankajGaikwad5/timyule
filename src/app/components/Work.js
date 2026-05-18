@@ -7,11 +7,13 @@ export default function Work() {
 
   return (
     <section
+      data-animate-section
+      data-animate-work
       id="work"
       className="relative z-10 py-[110px] px-[clamp(16px,4vw,48px)] max-w-[1320px] mx-auto"
     >
       {/* Section head */}
-      <div className="flex items-end justify-between gap-6 flex-wrap mb-12">
+      <div data-animate-reveal className="flex items-end justify-between gap-6 flex-wrap mb-12">
         <div>
           <Kicker>
             <Squiggle width={28} /> selected pieces
@@ -36,6 +38,7 @@ export default function Work() {
           return (
             <Link
               key={item.id}
+              data-animate-card
               href={`/product/${item.id}`}
               className="work-tile block relative"
               style={{ gridColumn: colSpan, gridRow: rowSpan }}
