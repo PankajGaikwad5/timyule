@@ -7,7 +7,7 @@ import AnimatedSignature from "./components/AnimatedSignature";
 export default function Home() {
   return (
     <main
-      className="fixed inset-0 w-screen h-screen overflow-hidden"
+      className="fixed inset-0 w-full h-dvh overflow-hidden"
       style={{
         background: `
           radial-gradient(900px 500px at 90% -10%, color-mix(in oklch, var(--accent) 12%, transparent), transparent 70%),

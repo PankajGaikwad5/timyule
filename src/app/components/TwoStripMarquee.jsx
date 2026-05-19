@@ -286,7 +286,7 @@ export default function TwoStripMarquee() {
   return (
     <>
       <div
-        className="absolute inset-0 w-full h-full flex flex-col justify-around overflow-hidden bg-transparent pt-[6vh] pb-[2vh]"
+        className="absolute inset-0 w-full h-full flex flex-col justify-around overflow-hidden bg-transparent pt-[6dvh] pb-[2dvh]"
         style={{
           zIndex,
           opacity: phase === "hidden" ? 0 : 1,
