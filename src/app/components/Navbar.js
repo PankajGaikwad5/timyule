@@ -61,6 +61,12 @@ export default function Navbar({ shopUrl }) {
             Portfolio
           </a>
           <a
+            href="/catalogue"
+            className="transition-opacity hover:opacity-100 text-sm text-[var(--ink)] opacity-[0.72]"
+          >
+            Catalogue
+          </a>
+          <a
             href={'https://kdtygallery.com/collections/aboriginal-artist-tim-yule-wiradjuri'}
             target="_blank"
             rel="noopener noreferrer"
@@ -107,6 +113,12 @@ export default function Navbar({ shopUrl }) {
           className="font-[family-name:var(--font-display)] text-[clamp(40px,10vw,64px)] text-[var(--ink)] tracking-[-0.02em]"
         >
           Portfolio
+        </a>
+        <a
+          href="/catalogue"
+          className="font-[family-name:var(--font-display)] text-[clamp(40px,10vw,64px)] text-[var(--ink)] tracking-[-0.02em]"
+        >
+          Catalogue
         </a>
         <a
           href={'https://kdtygallery.com/collections/aboriginal-artist-tim-yule-wiradjuri'}
