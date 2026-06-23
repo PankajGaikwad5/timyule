@@ -101,6 +101,38 @@ are facing and move forward.`,
 
   // INSTOCK (formerly in 'sold' folder)
   {
+    id: 81,
+    name: "The Flow of Spirit",
+    description: `This original artwork rendered in a calming palette evokes a sense of stillness and reflection. The seamless transition between land and sky reflects the belief that all things are connected—people, place and spirit. 
+
+It explores the enduring connection between people, Country and the spirit world. Beneath a star-filled sky lay gathering places: symbolising family and community, where knowledge and stories connect generations. 
+
+Rising from these circles are intricate pathways that flow like trees or spiritual connections, linking the earth to the night sky. The stars above represent ancestral presence, guidance and the timeless relationship between the Land and Sky Country.
+
+The Flow of Spirit invites viewers to contemplate their own connections to place, ancestry and the unseen threads that bind us across time. It is a celebration of belonging, continuity and the living spirit of Country.`,
+    images: [
+      "/instock/Theflowofspirit1.webp",
+      "/instock/Theflowofspirit2.webp",
+      "/instock/Theflowofspirit3.webp",
+    ],
+    status: "instock",
+    link: "https://kdtygallery.com/collections/aboriginal-artist-tim-yule/products/connection-to-spirit"
+  },
+  {
+    id: 82,
+    name: "Ancient Connections",
+    description: `This artwork explores the enduring connections between people, Country and spirit. The thousands of flowing marks represent the many stories, pathways and relationships that have been woven through time. Each mark reflects a journey, a memory and a connection passed through generations.
+
+The earthy ochre tones speak of the land and ancestral presence, while the layers of movement symbolise the continuing flow of knowledge, belonging and connection. “Ancient Connections” is a reflection on the stories held within Country and the threads that link us to those who walked before us.`,
+    images: [
+      "/instock/Ancientconnections1.webp",
+      "/instock/Ancientconnections2.webp",
+      "/instock/Ancientconnections3.webp",
+    ],
+    status: "instock",
+    link: "https://kdtygallery.com/collections/aboriginal-artist-tim-yule/products/connections"
+  },
+  {
     id: 8,
     name: "Galahs",
     description: `This acrylic on canvas painting, titled Galahs at Sunrise is an original and unique painting from Aboriginal Artist Timothy Yule a proud Wiradjuri man. He is also a member of the Aboriginal Art Association of Australia.`,
@@ -218,7 +250,7 @@ waterways and the community hubs.`,
 Aboriginal peoples would paint themselves in yellow ochre at these
 ceremonies. The name was also given to an endangered frog in the
 southern highlands of NSW that is decorated in yellow. The painting
-itself is an abstract painting of the frog.`,  
+itself is an abstract painting of the frog.`,
     images: [
       "/solds/Corroboree1.webp",
       "/solds/Corroboree2.webp",
