@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import CommissionModal from './CommissionModal'
 
 export default function Footer({ shopUrl }) {
@@ -172,8 +173,16 @@ export default function Footer({ shopUrl }) {
       </div>
 
       {/* Bottom bar */}
-      <div data-animate-reveal className="flex justify-between flex-wrap gap-4 pt-6 font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.16em] text-[var(--ink-soft)]">
-        <span>© {new Date().getFullYear()} Timothy Yule. All works copyright their artists.</span>
+      <div data-animate-reveal className="flex justify-between flex-wrap gap-x-8 gap-y-4 pt-6 font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.16em] text-[var(--ink-soft)]">
+        <div className="flex gap-x-6 gap-y-2 flex-wrap">
+          <span>© {new Date().getFullYear()} Timothy Yule. All works copyright their artists.</span>
+          <Link href="/privacy-policy" className="hover:text-[var(--ink)] border-b border-transparent hover:border-[var(--ink-soft)] pb-0.5 transition-all duration-200">
+            Privacy Policy
+          </Link>
+          <Link href="/terms-and-conditions" className="hover:text-[var(--ink)] border-b border-transparent hover:border-[var(--ink-soft)] pb-0.5 transition-all duration-200">
+            Terms & Conditions
+          </Link>
+        </div>
         <span>Site is a portfolio piece — not affiliated with anyone but the studio.</span>
       </div>
 

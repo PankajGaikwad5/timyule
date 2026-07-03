@@ -2,6 +2,7 @@ import { Instrument_Serif, Instrument_Sans } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import WhatsAppButton from './components/WhatsAppButton'
+import CookieBanner from './components/CookieBanner'
 
 const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
@@ -205,6 +206,7 @@ export default function RootLayout({ children }) {
       <body style={{ fontFamily: 'var(--font-body), system-ui, sans-serif' }}>
         {children}
         <WhatsAppButton />
+        <CookieBanner />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-5HHKHVCLTK"
           strategy="afterInteractive"
@@ -213,6 +215,18 @@ export default function RootLayout({ children }) {
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            
+            var consentMode = 'denied';
+            try {
+              if (localStorage.getItem('cookie-consent') === 'accepted') {
+                consentMode = 'granted';
+              }
+            } catch (e) {}
+            
+            gtag('consent', 'default', {
+              'analytics_storage': consentMode
+            });
+            
             gtag('js', new Date());
             gtag('config', 'G-5HHKHVCLTK');
           `}

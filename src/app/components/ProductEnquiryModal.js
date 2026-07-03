@@ -275,6 +275,36 @@ export default function ProductEnquiryModal({ isOpen, onClose, product }) {
               after submitting.
             </p>
 
+            {/* Privacy Agreement Checkbox */}
+            <div className="flex items-start gap-2.5 mt-1">
+              <input
+                id="agree-enquiry"
+                type="checkbox"
+                required
+                className="mt-0.5 shrink-0 accent-(--ink) w-4 h-4 cursor-pointer"
+              />
+              <label htmlFor="agree-enquiry" className="text-xs text-(--ink-soft) leading-normal cursor-pointer select-none">
+                I agree to the{' '}
+                <a
+                  href="/terms-and-conditions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-(--ink) border-b border-(--line) hover:border-(--ink) transition-colors duration-200 pb-px font-medium"
+                >
+                  Terms & Conditions
+                </a>{' '}
+                and{' '}
+                <a
+                  href="/privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-(--ink) border-b border-(--line) hover:border-(--ink) transition-colors duration-200 pb-px font-medium"
+                >
+                  Privacy Policy
+                </a>.
+              </label>
+            </div>
+
             {error && (
               <p className="text-[13px] text-red-600 m-0">{error}</p>
             )}
