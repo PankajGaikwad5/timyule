@@ -46,6 +46,7 @@ export default function CollectionsPage() {
             style={{ height: 'auto' }}
             sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 25vw"
             loading="lazy"
+            unoptimized
           />
           <div className="flex justify-between items-center mt-2.5 font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-[0.16em] text-[var(--ink-soft)]">
             <span>{item.name}</span>

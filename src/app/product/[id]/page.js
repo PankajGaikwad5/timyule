@@ -130,6 +130,7 @@ export default async function ProductPage({ params }) {
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority={idx === 0}
                 loading={idx === 0 ? 'eager' : 'lazy'}
+                unoptimized
               />
             </div>
           ))}

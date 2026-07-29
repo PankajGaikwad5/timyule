@@ -103,6 +103,7 @@ export default function CataloguePage() {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 160px"
                     loading="lazy"
+                    unoptimized
                   />
                   {/* Subtle Spine shadow to look like a book */}
                   <div className="absolute inset-y-0 left-0 w-2.5 bg-gradient-to-r from-black/20 to-transparent pointer-events-none" />

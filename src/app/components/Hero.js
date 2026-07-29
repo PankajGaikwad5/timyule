@@ -67,6 +67,7 @@ export default function Hero() {
               priority
               className="rounded-sm object-cover object-top"
               sizes="(max-width: 980px) 100vw, 400px"
+              unoptimized
             />
 
             {/* Heritage badge — anchored to portrait */}
